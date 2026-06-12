@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath } from '../../utils';
 
 export default function Slide5_LiveTesting() {
   return (
@@ -66,7 +67,7 @@ export default function Slide5_LiveTesting() {
             {/* 📽️ VIDEO LAYER (object-contain ile artık alt ve üst kontrol barları asla kırpılmaz!) */}
             <div className="relative flex items-center justify-center w-full h-full overflow-hidden bg-black">
               <video 
-                src="/adminflow.mp4" 
+                src={getAssetPath('adminflow.mp4')}
                 controls 
                 preload="auto"
                 className="object-contain object-center w-full h-full"

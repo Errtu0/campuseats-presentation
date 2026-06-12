@@ -1,27 +1,27 @@
 import React from 'react';
+import { getAssetPath } from '../../utils';
 
 export default function Slide6_Conclusion() {
   return (
     // 🚀 h-[620px] projektör perdesine tam sabitleme, dikey taşma riski sıfır!
     <div className="w-full h-[620px] bg-white border-[6px] border-black p-8 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] bg-grid-pattern bg-[size:30px_30px] flex flex-col justify-between select-none overflow-hidden">
       
-      {/* 🔝 ÜST BAŞLIK ALANI (Fontlar devleştirildi ve Syne Fontu kilitlendi) */}
+      {/* 🔝 ÜST BAŞLIK ALANI */}
       <div className="flex flex-row items-end justify-between border-b-[6px] border-black pb-3 mb-4 gap-4">
         <div>
           <span className="bg-black text-white border-4 border-black text-sm font-black px-4 py-0.5 uppercase tracking-widest shadow-[3px_3px_0px_0px_rgba(255,107,107,1)] inline-block font-syne">
-          06 // MISSION ACCOMPLISHED
+            06 // MISSION ACCOMPLISHED
           </span>
           <h2 className="mt-1 text-5xl font-black leading-none tracking-tighter text-black uppercase lg:text-6xl font-syne">
             CONCLUSION
           </h2>
         </div>
-        
       </div>
 
-      {/* 📊 ORTA ALAN: SOL SADE METİN & SAĞ PENGUEN GÖRSELİ */}
+      {/* 📊 ORTA ALAN */}
       <div className="grid items-stretch flex-1 min-h-0 grid-cols-1 gap-8 lg:grid-cols-2">
         
-        {/* SOL KOLON: DEVASA VE SADE CONCLUSION METNİ (Kullanıcı ve Jüri Odaklı) */}
+        {/* SOL KOLON */}
         <div className="flex flex-col justify-center h-full gap-4 p-2">
           <h3 className="pl-4 text-3xl font-black tracking-widest text-black uppercase border-l-8 border-black font-syne">
             Final Wrap-Up:
@@ -32,12 +32,12 @@ export default function Slide6_Conclusion() {
         </div>
 
         {/* SAĞ KOLON: KUSURSUZ PENGUEN GÖRSELİ KASASI */}
-        <div className=" border-[6px] border-black p-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] h-full relative overflow-hidden group flex items-center justify-center bg-gray-50">
+        <div className="border-[6px] border-black p-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] h-full relative overflow-hidden group flex items-center justify-center bg-gray-50">
           <div className="absolute inset-0 bg-grid-pattern bg-[size:24px_24px] opacity-10 pointer-events-none" />
           
-          {/* 🐧 Penguen İllüstrasyonu Buraya Enjekte Edildi */}
+          {/* 🚀 getAssetPath içine başına düzgünce / koyarak tünelliyoruz */}
           <img 
-            src="/penguen.png" 
+            src={getAssetPath('/penguen.png')}
             alt="EMU IT Capstone Project Penguins Finish Line" 
             className="relative z-10 object-contain w-full h-full"
             onError={(e) => {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getAssetPath } from '../../utils';
 
 export default function Slide3_Showcase() {
   const [activeRole, setActiveRole] = useState('customer');
@@ -64,7 +65,15 @@ export default function Slide3_Showcase() {
     }
   };
 
-  const currentFlowData = content[activeRole].flows.find(f => f.id === activeFlow) || content[activeRole].flows[0];
+  const rawFlowData = content[activeRole].flows.find(f => f.id === activeFlow) || content[activeRole].flows[0];
+  
+  const currentFlowData = {
+    ...rawFlowData,
+    screens: rawFlowData.screens.map(screen => ({
+      ...screen,
+      img: getAssetPath(screen.img) // Artık tertemiz utils fonksiyonumuz dönüştürüyor
+    }))
+  };
 
   // Rol veya akış değiştiğinde otomatik olarak ilk ekranı seçili yap
   const handleRoleChange = (role) => {

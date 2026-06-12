@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
+import { getAssetPath } from './utils';
 import Slide1_Problem from './components/slides/Slide1_Problem';
 import Slide2_Features from './components/slides/Slide2_Features';
 import Slide3_Showcase from './components/slides/Slide3_Showcase';
 import Slide4_Architecture from './components/slides/Slide4_Architecture';
 import Slide5_LiveTesting from './components/slides/Slide5_LiveTesting';
 import Slide6_Conclusion from './components/slides/Slide6_Conclusion';
+
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,32 +15,32 @@ export default function App() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // 👥 Takım Bilgileri - İsteğin doğrultusunda 2 Kadın, 3 Erkek avatar dengesi kilitlendi!
+  // 👥 Takım Bilgileri
   const teamMembers = [
     {
       name: "Çisel",
       role: "FRONTEND LEAD & PROJECT MANAGER",
-      avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack" // Erkek
+      avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack"
     },
     {
       name: "Şems",
       role: "CYBERSECURITY LEAD",
-      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=haasc3ll" // Kadın
+      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=haasc3ll"
     },
     {
       name: "Rustam",
       role: "MOBILE DEVELOPER",
-      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=0n8i8mwe" // Erkek
+      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=0n8i8mwe"
     },
     {
       name: "Oghonazar",
       role: "DATABASE ADMIN",
-      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=ae89iiwc" // Erkek
+      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=ae89iiwc"
     },
     {
       name: "Furkan",
       role: "BACKEND & DEVOPS LEAD",
-      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=r47y7w3a" // Kadın
+      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=r47y7w3a"
     }
   ];
 
@@ -52,7 +53,7 @@ export default function App() {
     { id: "05", title: "LIVE TESTING & CONCLUSION", sub: "Emulator Core Simulation & Conclusion Summary", color: "bg-black text-white", pos: "bottom-13 right-25" }
   ];
 
-  // 🔄 SCROLL DETEKTÖRÜ: Navbar Gizleme/Gösterme Mantığı
+  // 🔄 SCROLL DETEKTÖRÜ
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window !== 'undefined') {
@@ -83,7 +84,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FDFBEB] bg-grid-pattern bg-[size:24px_24px] text-black font-sans antialiased pb-12 selection:bg-[#FF6B6B] selection:text-white relative overflow-x-hidden">
       
-      {/* 🌐 NEOBRUTALIST NAVBAR (Dinamik Gizleme Sınıfları Aktif) */}
+      {/* 🌐 NEOBRUTALIST NAVBAR */}
       <nav className={`fixed top-0 left-0 w-full z-40 bg-[#FDFBEB] border-b-4 border-black h-20 flex items-center justify-between px-6 md:px-12 transition-transform duration-300 ${
         showNavbar ? 'translate-y-0' : '-translate-y-full'
       }`}>
@@ -91,7 +92,7 @@ export default function App() {
           {/* EMU STORE LOGO */}
           <div className="flex items-center gap-4 bg-white border-4 border-black px-5 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all cursor-pointer select-none">
             <img 
-              src="/emustore-logo.png" 
+              src={getAssetPath('/emustore-logo.png')} 
               alt="EMU Store" 
               className="object-contain w-9 h-9"
               onError={(e) => {
@@ -133,7 +134,7 @@ export default function App() {
           <div className="w-full lg:w-[42%] bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-row lg:flex-col items-center text-left lg:text-center gap-4 justify-center">
             <div className="w-28 h-28 bg-white border-4 border-black p-2 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center shrink-0">
               <img 
-                src="/logo.png" 
+                src={getAssetPath('/logo.png')} 
                 alt="CampusEats Logo" 
                 className="object-contain w-full h-full"
                 onError={(e) => {
