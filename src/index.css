@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Palette */
+  --color-brand-red: #DD5544;
+  --color-brand-cream: #F4F1DE;
+  --color-brand-teal: #618C82;
+  
+  /* UI Elements */
+  --shadow-neo: 8px 8px 0px 0px rgba(0,0,0,1);
+  --shadow-neo-sm: 4px 4px 0px 0px rgba(0,0,0,1);
+}
+
+body {
+  background-color: #F4F1DE;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom button class for that thick Neobrutalist look */
+.btn-neo {
+  @apply bg-brand-red text-white border-4 border-black px-6 py-2 font-black 
+         shadow-neo-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all;
+}
