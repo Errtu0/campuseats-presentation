@@ -19,27 +19,27 @@ export default function App() {
   const teamMembers = [
     {
       name: "Çisel",
-      role: "FRONTEND LEAD & PROJECT MANAGER",
+      role: "UI/UX DESIGNER & PRODUCT OWNER",
       avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack"
     },
     {
       name: "Şems",
-      role: "CYBERSECURITY LEAD",
-      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=haasc3ll"
+      role: "PROJECT MANAGER & DATA ARCHITECT",
+      avatar: "https://api.dicebear.com/10.x/pixel-art/svg?accessoriesVariant=&beardVariant=&clothesVariant=variant06,variant23&eyesVariant=variant01,variant09,variant11&glassesVariant=dark04,dark07,light07&hairVariant=long05&hatVariant=&mouthVariant=happy09&seed=y1jf9t6b"
     },
     {
       name: "Rustam",
-      role: "MOBILE DEVELOPER",
+      role: "BACKEND DEVELOPER & SECURITY ANALYST",
       avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=0n8i8mwe"
     },
     {
       name: "Oghonazar",
-      role: "DATABASE ADMIN",
+      role: "FRONTEND DEVELOPER & UI SPECIALIST",
       avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=ae89iiwc"
     },
     {
       name: "Furkan",
-      role: "BACKEND & DEVOPS LEAD",
+      role: "LEAD DEVELOPER & SYSTEM ARCHITECT",
       avatar: "https://api.dicebear.com/10.x/pixel-art/svg?seed=r47y7w3a"
     }
   ];
