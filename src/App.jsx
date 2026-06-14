@@ -19,7 +19,7 @@ export default function App() {
   const teamMembers = [
     {
       name: "Çisel",
-      role: "UI/UX DESIGNER & PRODUCT OWNER",
+      role: "UI/UX DESIGNER & TEAM LEADER",
       avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=Jack"
     },
     {
